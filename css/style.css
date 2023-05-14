@@ -1,0 +1,234 @@
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    --purple71:rgb(64, 56, 71);
+    --black32:rgb(32, 32, 32);
+    --black15:rgb(15, 15, 15);
+    --purple:rgb(34, 32, 48);
+    
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+body{
+    background-color: var(--purple);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+li{
+    list-style: none;
+}
+/**Forma inactiva*/
+.inactive{
+    display: none;
+}
+/**Estilo del texto info*/
+.infoBien{
+    color:rgb(178, 255, 127)
+}
+.infoMal{
+    color:rgb(255, 127, 127)
+}
+
+/**Boton de color verde*/
+.buttonBueno{
+    border: 1px solid rgb(39, 252, 164); 
+    background-color: var(--purple71);
+    color: aquamarine;
+    width: 6rem;
+    height: 2.5rem;
+    border-radius: 5px;
+    font-size: 22px;
+}
+.buttonBueno:hover{
+    border-style: none;
+    background-color: aquamarine;
+    color:black;
+}
+/**Boton de color azul*/
+.buttonAzul{
+    border: 1px solid rgb(39, 145, 252); 
+    background-color: var(--purple71);
+    color: rgb(127, 197, 255);
+    width: 6rem;
+    height: 2.5rem;
+    border-radius: 5px;
+    font-size: 22px;
+}
+.buttonAzul:hover{
+    border-style: none;
+    background-color: rgb(127, 204, 255);
+    color:black;
+}
+/**Boton de color azul*/
+.buttonRojo{
+    border: 1px solid rgb(247, 115, 115); 
+    background-color: var(--purple71);
+    color: rgb(255, 127, 131);
+    width: 6rem;
+    height: 2.5rem;
+    border-radius: 5px;
+    font-size: 22px;
+}
+.buttonRojo:hover{
+    border-style: none;
+    background-color: rgb(255, 127, 133);
+    color:black;
+}
+/**Contenedor*/
+.container{
+    display: flex;
+    flex-direction: row;
+}
+
+/**Seccion del contenedor de la tabla*/
+#tablaContainer{
+    background-color: var(--purple71);
+    display: flex;
+    flex-direction: column;
+}
+
+
+.izquierda{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--black32);
+    border: 1px solid rgb(190, 127, 248);
+    border-radius: 5px;
+    padding: 2rem;
+    margin-left: 40rem;
+    width: 350px;
+}
+/**Seccion de las barras*/
+.bar{
+    background-color: var(--black32);
+    border: 1px solid;
+    border-radius: 5px;
+    color:black;
+    margin-bottom: 1rem;;
+}
+#barAdd{
+    background-color: aquamarine;
+}
+#barUpdate{
+    background-color: rgb(174, 255, 127);
+}
+#barDelete{
+    background-color: rgb(255, 127, 127);
+}
+/**Secion del añadir contacto*/
+.containerPrincipal{
+    position: absolute;
+    margin-top: 4.2rem;
+}
+#addContainer{
+    
+    text-align: start;
+    align-items: start;
+    height: 480px;
+    width: 350px;
+    background-color: var(--black32);
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    border-color: cyan;
+    border-width: 1px;
+    border-style: solid;
+}
+
+#addContainer h3{
+    margin-left:1rem;
+}
+#addContainer h2{
+    margin-left:1rem;
+}
+input{
+    margin-left: 1rem;
+    padding-left: 1rem;
+    color: white;
+    height: 2rem;
+    width: 18rem;
+    background-color: var(--purple71);
+    border-style: none;
+    border-radius: 5px;
+    
+}
+input:focus{
+    outline-style: solid;
+    outline-color: cyan;
+}
+form button{
+    margin-top: 2.5rem;
+    margin-left: 14rem;
+
+}
+/**Seccion de modificar*/
+#updateView{
+    margin-top: 10rem;
+}
+#updateContainer{
+   
+    text-align: start;
+    align-items: start;
+    height: 550px;
+    width: 350px;
+    background-color: var(--black32);
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    border-color: rgb(187, 251, 115);
+    border-width: 1px;
+    border-style: solid;
+}
+#updateContainer form button{
+    margin-top: 1rem;
+    margin-left: 14rem;
+
+}
+#updateContainer h3{
+    margin-left:1rem;
+}
+#updateContainer h2{
+    margin-left:1rem;
+}
+#updateContainer .buttonBueno{
+    width: max-content;
+    margin-left: 13rem;
+}
+/**Seccion de borrar*/
+#deleteView{
+    margin-top: 15rem;
+}
+#deleteContainer{
+    text-align: start;
+    align-items: start;
+    height: 360px;
+    width: 350px;
+    background-color: var(--black32);
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    border-color: rgb(251, 115, 115);
+    border-width: 1px;
+    border-style: solid;
+}
+#deleteContainer form button{
+    margin-top: 1rem;
+    margin-left: 14rem;
+
+}
+#deleteContainer h3{
+    margin-left:1rem;
+}
+#deleteContainer h2{
+    margin-left:1rem;
+}
+
+
+
+
