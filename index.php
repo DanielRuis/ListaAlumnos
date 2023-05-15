@@ -12,6 +12,12 @@
         die("Error connecting: " . mysqli_connect_error());
     }
 
+    //Hace la consulta de alumnos
+    $query="SELECT * FROM lista";
+    $result=mysqli_query($mysqli,$query);
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,41 +45,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>B190047</td>
-                        <td>Daniel Eduardo Ruis</td>
-                        <td>Daniel.ruis@unach.mx</td>
-                    </tr>
-                    <tr>
-                        <td>B190047</td>
-                        <td>Daniel Eduardo Ruis</td>
-                        <td>Daniel.ruis@unach.mx</td>
-                    </tr>
-                    <tr>
-                        <td>B190047</td>
-                        <td>Daniel Eduardo Ruis</td>
-                        <td>Daniel.ruis@unach.mx</td>
-                    </tr>
-                    <tr>
-                        <td>B190047</td>
-                        <td>Daniel Eduardo Ruis</td>
-                        <td>Daniel.ruis@unach.mx</td>
-                    </tr>
-                    <tr>
-                        <td>B190047</td>
-                        <td>Daniel Eduardo Ruis</td>
-                        <td>Daniel.ruis@unach.mx</td>
-                    </tr>
-                    <tr>
-                        <td>B17</td>
-                        <td>Daniel Eduardo Ruis</td>
-                        <td>Daniel.ruis@unach.mx</td>
-                    </tr>
-                    <tr>
-                        <td>B190047</td>
-                        <td>Daniel Eduardo Ruis</td>
-                        <td>Daniel.ruis@unach.mx</td>
-                    </tr>
+                    <?php
+                        if (mysqli_num_rows($result)>0){
+                            while ($row=mysqli_fetch_assoc($result)){
+                                echo "<tr>";
+                                echo "<td>".$row['matricula']."</td>";
+                                echo "<td>".$row['nombre']."</td>";
+                                echo "<td>".$row['correo']."</td>";
+                                echo "</tr>";
+                            }
+                        }else{
+                            echo "<h2>No hay datos</h2>";
+                        }
+                    ?>
                     
                 </tbody>
 
