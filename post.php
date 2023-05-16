@@ -1,4 +1,16 @@
+
 <?php
+$hostname = "localhost";
+$username = "dano";
+$password = "31342522DErx<";
+$database = "ListaAlumnos";
+
+$mysqli = mysqli_connect($hostname, $username, $password, $database);
+
+if (!$mysqli) {
+    die("Error connecting: " . mysqli_connect_error());
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $matricula = $_POST["matricula"];
     $nombre = $_POST["nombre"];
