@@ -77,14 +77,14 @@
             <div class="containerPrincipal inactive" id="addView">
                 <div id="addContainer">
                     <h2>Agregue los datos</h2>
-                    <form>
+                    <form method="post" action="post.php">
                         <h3>Matricula</h2>
-                        <input type="text" id="matriAdd">
+                        <input type="text" id="matriAdd" name="matricula">
                         <h3>Nombre</h2>
-                        <input type="text" id="nameAdd">
+                        <input type="text"  name="nombre"id="nameAdd">
                         <h3>Correo</h2>
-                        <input type="email" id="correoAdd">
-                        <button id="buttonAdd" class="buttonBueno">Añadir</button>
+                        <input type="email" id="correoAdd" name="correo">
+                        <button id="buttonAdd" class="buttonBueno" type="submit">Añadir</button>
                     </form>
                     <h3 id="infoAdd"></h3>
                 </div>
