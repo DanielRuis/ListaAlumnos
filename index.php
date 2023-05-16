@@ -121,5 +121,25 @@
         
         
     </section>
+    <script>
+    document.getElementById("addForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Detener el envío del formulario
+
+        // Realizar la solicitud AJAX para enviar los datos al archivo "agregar.php"
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "post.php", true);
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                // Actualizar la página "index.php" después de enviar los datos
+                location.reload();
+            } else {
+                // Manejar el error si ocurre
+                console.log("Error al enviar los datos");
+            }
+        };
+        xhr.send(new FormData(event.target));
+    });
+</script>
+
 </body>
 </html>
